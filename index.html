@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAVI — Gelato, Smoothies & Açaí</title>
+
+  <!-- Google Fonts: Jost (cuerpo/UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- =====================================================
+       NAV — logo SAVI + links de ancla a las secciones
+  ====================================================== -->
+  <header class="nav">
+    <a href="#top" class="nav-logo">
+      <svg viewBox="0 0 48 60" width="22" height="28" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 27 L24 55 L33 27"></path><path d="M16 27 a8 7.5 0 0 1 16 0"></path><path d="M18 20.5 a6 6 0 0 1 12 0"></path><path d="M20.5 15 a3.5 4 0 0 1 7 0"></path></svg>
+      <span>SAVI</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#events">Events</a>
+      <a href="#visit">Visit</a>
+    </nav>
+  </header>
+
+  <!-- =====================================================
+       HERO — foto de producto a pantalla completa + logo +
+       tagline real de marca ("Sweet moments, beautifully made.")
+       IMAGEN: hero-bg.jpg (reemplazar por foto real de SAVI)
+  ====================================================== -->
+  <section id="top" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="hero-line"></span>
+        <span>Artisanal Italian Gelato</span>
+        <span class="hero-line"></span>
+      </div>
+      <div class="hero-wordmark-row">
+        <svg viewBox="0 0 48 60" width="40" height="50" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 27 L24 55 L33 27"></path><path d="M16 27 a8 7.5 0 0 1 16 0"></path><path d="M18 20.5 a6 6 0 0 1 12 0"></path><path d="M20.5 15 a3.5 4 0 0 1 7 0"></path></svg>
+        <span class="hero-wordmark">SAVI</span>
+      </div>
+      <h1 class="hero-tagline">Sweet moments,<br>beautifully made.</h1>
+      <p class="hero-categories">Gelato &nbsp;·&nbsp; Smoothies &nbsp;·&nbsp; Açaí &nbsp;·&nbsp; Coffee</p>
+      <a href="#menu" class="hero-cta">See the menu <span class="arrow">→</span></a>
+    </div>
+    <div class="hero-scroll">scroll</div>
+  </section>
+
+  <!-- =====================================================
+       CATEGORIES — 4 tarjetas: Gelato / Smoothies / Açaí / Coffee
+       IMÁGENES: cat-gelato.jpg, cat-smoothies.jpg, cat-acai.jpg, cat-coffee.jpg
+  ====================================================== -->
+  <section class="categories">
+    <div class="section-inner">
+      <div class="section-head center">
+        <p class="eyebrow light">The menu, by mood</p>
+        <h2 class="title light">Which one feels like you?</h2>
+      </div>
+      <div class="cats-grid">
+
+        <a href="#menu" class="cat-card">
+          <img src="images/cat-gelato.jpg" alt="Gelato">
+          <div class="cat-fade"></div>
+          <span class="cat-label">Gelato</span>
+        </a>
+
+        <a href="#menu" class="cat-card">
+          <img src="images/cat-smoothies.jpg" alt="Smoothies">
+          <div class="cat-fade"></div>
+          <span class="cat-label">Smoothies</span>
+        </a>
+
+        <a href="#menu" class="cat-card">
+          <img src="images/cat-acai.jpg" alt="Açaí">
+          <div class="cat-fade"></div>
+          <span class="cat-label">Açaí</span>
+        </a>
+
+        <a href="#menu" class="cat-card">
+          <img src="images/cat-coffee.jpg" alt="Coffee">
+          <div class="cat-fade"></div>
+          <span class="cat-label">Coffee</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       MENU — mosaico asimétrico (bento grid) con 7 piezas:
+       Gelato (grande) · Smoothies · Croffles · Coffee ·
+       Açaí bowl · Sweet treats · Frappes
+       IMÁGENES: menu-gelato.jpg, menu-smoothies.jpg, menu-croffles.jpg,
+                 menu-coffee.jpg, menu-acai.jpg, menu-sweets.jpg, menu-frappes.jpg
+  ====================================================== -->
+  <section id="menu" class="menu">
+    <div class="section-inner">
+      <div class="section-head split">
+        <div>
+          <p class="eyebrow">A few things we love</p>
+          <h2 class="title">On the menu.</h2>
+        </div>
+        <p class="menu-intro">Small batches, real fruit, real milk. Made the slow way — the way it should be.</p>
+      </div>
+
+      <div class="savi-bento">
+
+        <!-- Gelato: pieza ancla, la más grande del mosaico -->
+        <a href="#" class="bento-card" style="grid-area: gel">
+          <img src="images/menu-gelato.jpg" alt="Gelato">
+          <div class="bento-fade tall"></div>
+          <span class="bento-tag">
+            <svg viewBox="0 0 48 60" width="15" height="19" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 27 L24 55 L33 27"></path><path d="M16 27 a8 7.5 0 0 1 16 0"></path><path d="M19 20 a5 5 0 0 1 10 0"></path></svg>
+            Gelato
+          </span>
+          <div class="bento-copy">
+            <p class="bento-eyebrow">Authentic Italian</p>
+            <p class="bento-quote big">One scoop, two, or three — different moods, same joy.</p>
+          </div>
+        </a>
+
+        <!-- Smoothies -->
+        <a href="#" class="bento-card" style="grid-area: smo">
+          <img src="images/menu-smoothies.jpg" alt="Smoothies">
+          <div class="bento-fade"></div>
+          <span class="bento-tag">
+            <svg viewBox="0 0 48 60" width="15" height="19" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 27 L24 55 L33 27"></path><path d="M16 27 a8 7.5 0 0 1 16 0"></path><path d="M19 20 a5 5 0 0 1 10 0"></path></svg>
+            Smoothies
+          </span>
+          <div class="bento-copy">
+            <p class="bento-eyebrow">Sip something pretty</p>
+            <p class="bento-quote">Go Green to Pink Bliss.</p>
+          </div>
+        </a>
+
+        <!-- Croffles -->
+        <a href="#" class="bento-card" style="grid-area: cro">
+          <img src="images/menu-croffles.jpg" alt="Croffles">
+          <div class="bento-fade"></div>
+          <span class="bento-tag">
+            <svg viewBox="0 0 48 60" width="15" height="19" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 27 L24 55 L33 27"></path><path d="M16 27 a8 7.5 0 0 1 16 0"></path><path d="M19 20 a5 5 0 0 1 10 0"></path></svg>
+            Croffles
+          </span>
+          <div class="bento-copy">
+            <p class="bento-eyebrow">Warm + golden</p>
+            <p class="bento-quote">Biscoff, Nutella, Oreo, Dubai.</p>
+          </div>
+        </a>
+
+        <!-- Coffee -->
+        <a href="#" class="bento-card" style="grid-area: cof">
+          <img src="images/menu-coffee.jpg" alt="Coffee">
+          <div class="bento-fade"></div>
+          <span class="bento-tag small">
+            <svg viewBox="0 0 48 60" width="14" height="18" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 27 L24 55 L33 27"></path><path d="M16 27 a8 7.5 0 0 1 16 0"></path><path d="M19 20 a5 5 0 0 1 10 0"></path></svg>
+            Coffee
+          </span>
+          <div class="bento-copy tight">
+            <p class="bento-eyebrow small">Slow mornings</p>
+            <p class="bento-quote small">Latte, mocha &amp; more. ☕</p>
+          </div>
+        </a>
+
+        <!-- Açaí bowl -->
+        <a href="#" class="bento-card" style="grid-area: aca">
+          <img src="images/menu-acai.jpg" alt="Açaí bowl">
+          <div class="bento-fade"></div>
+          <span class="bento-tag">
+            <svg viewBox="0 0 48 60" width="15" height="19" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 27 L24 55 L33 27"></path><path d="M16 27 a8 7.5 0 0 1 16 0"></path><path d="M19 20 a5 5 0 0 1 10 0"></path></svg>
+            Açaí bowl
+          </span>
+          <div class="bento-copy">
+            <p class="bento-eyebrow">Bowl life</p>
+            <p class="bento-quote">Açaí &amp; coconut bowls 🍃</p>
+          </div>
+        </a>
+
+        <!-- Sweet treats -->
+        <a href="#" class="bento-card" style="grid-area: swe">
+          <img src="images/menu-sweets.jpg" alt="Sweet treats">
+          <div class="bento-fade"></div>
+          <span class="bento-tag">
+            <svg viewBox="0 0 48 60" width="15" height="19" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 27 L24 55 L33 27"></path><path d="M16 27 a8 7.5 0 0 1 16 0"></path><path d="M19 20 a5 5 0 0 1 10 0"></path></svg>
+            Sweet treats
+          </span>
+          <div class="bento-copy">
+            <p class="bento-eyebrow">A little extra</p>
+            <p class="bento-quote">Bubble waffle, affogato, cannoli.</p>
+          </div>
+        </a>
+
+        <!-- Frappes -->
+        <a href="#" class="bento-card" style="grid-area: fra">
+          <img src="images/menu-frappes.jpg" alt="Frappes">
+          <div class="bento-fade"></div>
+          <span class="bento-tag">
+            <svg viewBox="0 0 48 60" width="15" height="19" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 27 L24 55 L33 27"></path><path d="M16 27 a8 7.5 0 0 1 16 0"></path><path d="M19 20 a5 5 0 0 1 10 0"></path></svg>
+            Frappes
+          </span>
+          <div class="bento-copy">
+            <p class="bento-eyebrow">No excuse to skip it</p>
+            <p class="bento-quote">Frappes, iced your way.</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       ABOUT — foto del local + historia breve en voz de marca
+       IMAGEN: about-counter.jpg
+  ====================================================== -->
+  <section id="about" class="about">
+    <div class="about-inner">
+      <div class="about-photo">
+        <img src="images/about-counter.jpg" alt="SAVI gelato counter">
+      </div>
+      <div class="about-copy">
+        <p class="eyebrow pink">Sobre SAVI — Italian style</p>
+        <h2 class="title light">Gelato, the slow way.</h2>
+        <p class="about-text">SAVI is artisanal Italian gelato, made in small batches with real fruit and real milk — no shortcuts, no pretending. We started with one simple idea: a sweet moment should feel made just for you.</p>
+        <p class="about-quote">Crafted with love, served with style, remembered forever.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       BOOK THE CART — formulario para reservar el carrito
+       móvil de gelato para eventos (bodas, cumpleaños, etc).
+       Envía un mailto: con los datos del form, sin backend.
+       Reemplazar EVENTS_EMAIL_PLACEHOLDER en script.js por el
+       correo real de contacto cuando esté listo.
+  ====================================================== -->
+  <section id="events" class="events">
+    <div class="events-inner">
+
+      <div class="events-panel">
+        <svg class="events-cone-deco" viewBox="0 0 48 60" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 27 L24 55 L33 27"></path><path d="M16 27 a8 7.5 0 0 1 16 0"></path><path d="M18 20.5 a6 6 0 0 1 12 0"></path><path d="M20.5 15 a3.5 4 0 0 1 7 0"></path></svg>
+
+        <p class="eyebrow light">Our mobile gelato bar · for events</p>
+        <h2 class="title light">A touch of Italy,<br>a moment to remember.</h2>
+        <p class="events-text">Weddings, birthdays, a slow afternoon with friends. Our little cart rolls in, and the sweet moments follow. 💞</p>
+
+        <ol class="events-steps">
+          <li>
+            <span class="step-num">1</span>
+            <div>
+              <p class="step-title">Tell us about your event</p>
+              <p class="step-sub">Your name, phone, and the type of event.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">2</span>
+            <div>
+              <p class="step-title">Share the details</p>
+              <p class="step-sub">Location, date, time, and how many guests.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">3</span>
+            <div>
+              <p class="step-title">Receive your quote</p>
+              <p class="step-sub">We'll prepare a proposal made just for your day.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">4</span>
+            <div>
+              <p class="step-title">Reserve your date</p>
+              <p class="step-sub">Please send requests at least 7 days ahead. ✨</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="events-form-card">
+        <p class="eyebrow">Tell us a little</p>
+        <h2 class="title">Let's plan your day.</h2>
+
+        <form id="events-form" class="events-form">
+          <div class="field">
+            <label for="ev-name">Name</label>
+            <input type="text" id="ev-name" name="name" placeholder="María Rossi" required>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="ev-phone">Phone</label>
+              <input type="tel" id="ev-phone" name="phone" placeholder="(912) 555-0100" required>
+            </div>
+            <div class="field">
+              <label for="ev-type">Type of event</label>
+              <input type="text" id="ev-type" name="eventType" placeholder="Wedding" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="ev-location">Location</label>
+            <input type="text" id="ev-location" name="location" placeholder="Brunswick, GA" required>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="ev-date">Date</label>
+              <input type="date" id="ev-date" name="date" required>
+            </div>
+            <div class="field">
+              <label for="ev-time">Time</label>
+              <input type="time" id="ev-time" name="time" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="ev-guests">Estimated guests</label>
+            <input type="number" id="ev-guests" name="guests" placeholder="50" min="1" required>
+          </div>
+
+          <button type="submit" class="events-submit">Send my request <span class="arrow">→</span></button>
+
+          <p class="events-disclaimer">This opens an email to <span class="events-email-placeholder">events@savigelato.com</span> with your details — review and send.<br>Requests at least 7 days ahead.</p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =====================================================
+       VISIT — dirección, horario, Instagram + mapa estilizado
+       (mapa ilustrado con CSS, sin dependencias externas)
+  ====================================================== -->
+  <section id="visit" class="visit">
+    <div class="visit-inner">
+      <div class="visit-info">
+        <p class="eyebrow">Find us</p>
+        <h2 class="title">Come say hi.</h2>
+
+        <div class="visit-rows">
+          <div class="visit-row">
+            <svg class="visit-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <div>
+              <p class="visit-main">3365 Cypress Mill Rd, Suite 3</p>
+              <p class="visit-sub">Georgia</p>
+            </div>
+          </div>
+
+          <div class="visit-row">
+            <svg class="visit-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+            <div class="visit-hours">
+              <div class="hours-row"><span>Mon – Fri</span><span>11 am – 8 pm</span></div>
+              <div class="hours-row"><span>Saturday</span><span>12 pm – 10 pm</span></div>
+              <div class="hours-row"><span>Sunday</span><span>12 pm – 8 pm</span></div>
+            </div>
+          </div>
+
+          <div class="visit-row">
+            <svg class="visit-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"></circle></svg>
+            <div>
+              <a href="https://instagram.com/savi.gelato" target="_blank" rel="noopener" class="visit-ig">@savi.gelato</a>
+              <p class="visit-sub">See it before you taste it</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="https://www.google.com/maps/search/?api=1&query=3365+Cypress+Mill+Rd+Suite+3+GA" target="_blank" rel="noopener" class="visit-cta">
+          Get directions <span class="arrow">→</span>
+        </a>
+      </div>
+
+      <!-- Mapa real embebido de Google Maps con la dirección de SAVI -->
+      <div class="map-card">
+        <iframe
+          class="map-iframe"
+          src="https://www.google.com/maps?q=3365+Cypress+Mill+Rd+Suite+3+GA&output=embed"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="SAVI location map">
+        </iframe>
+        <a href="https://www.google.com/maps/search/?api=1&query=3365+Cypress+Mill+Rd+Suite+3+GA" target="_blank" rel="noopener" class="map-open">
+          Open in Google Maps <span class="arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       FOOTER — logo, dirección/horario, Instagram, copyright
+  ====================================================== -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <svg viewBox="0 0 48 60" width="26" height="32" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 27 L24 55 L33 27"></path><path d="M16 27 a8 7.5 0 0 1 16 0"></path><path d="M18 20.5 a6 6 0 0 1 12 0"></path><path d="M20.5 15 a3.5 4 0 0 1 7 0"></path></svg>
+          <span>SAVI</span>
+        </div>
+        <p class="footer-tagline">Sweet moments, beautifully made.</p>
+        <p class="footer-cats">Gelato · Smoothies · Açaí · Coffee</p>
+      </div>
+
+      <div>
+        <p class="footer-heading">Visit</p>
+        <p class="footer-text">3365 Cypress Mill Rd, Suite 3<br>Georgia</p>
+        <p class="footer-text spaced">Mon – Fri · 11 am – 8 pm<br>Sat · 12 pm – 10 pm &nbsp;|&nbsp; Sun · 12 pm – 8 pm</p>
+      </div>
+
+      <div>
+        <p class="footer-heading">Say hi</p>
+        <a href="https://instagram.com/savi.gelato" target="_blank" rel="noopener" class="footer-ig">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"></circle></svg>
+          @savi.gelato
+        </a>
+        <p class="footer-text spaced">The best conversations<br>start with coffee. ☕</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 SAVI Gelato</span>
+      <span>Artisanal &amp; authentic, Italian style</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
