@@ -194,7 +194,7 @@ a:focus-visible {
   position: absolute;
   bottom: 26px;
   left: 50%;
-  transform: translateX(-50%);
+  margin-left: -28px;
   font-size: 10px;
   letter-spacing: .3em;
   text-transform: uppercase;
