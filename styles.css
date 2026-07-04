@@ -26,6 +26,14 @@ a { color: inherit; }
   * { animation-duration: .001s !important; animation-iteration-count: 1 !important; }
 }
 
+/* ---------- Efectos de scroll (GSAP ScrollTrigger) ---------- */
+.hero-content {
+  will-change: transform;
+}
+.reveal {
+  will-change: transform, opacity;
+}
+
 /* ---------- Animaciones reutilizables ---------- */
 @keyframes rise {
   from { opacity: 0; transform: translateY(26px); }

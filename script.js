@@ -9,6 +9,9 @@
    2) El manejo del formulario de "Book the Cart" (sección
       #events), que envía los datos a Formspree via fetch,
       sin recargar la página.
+   3) Efectos de scroll con GSAP + ScrollTrigger: parallax
+      suave en el hero y fade-up al entrar al viewport en
+      tarjetas y bloques de contenido.
 ========================================================= */
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -79,6 +82,56 @@ document.addEventListener('DOMContentLoaded', function () {
           submitBtn.disabled = false;
           submitBtn.innerHTML = originalBtnText;
         });
+    });
+  }
+
+  // ---------- Efectos de scroll (parallax + reveal) ----------
+  // Se saltan por completo si el usuario prefiere menos
+  // movimiento (misma preferencia que ya respeta el CSS), o
+  // si GSAP no llegó a cargar por algún motivo (falla de red, etc).
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!prefersReducedMotion && window.gsap && window.ScrollTrigger) {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Parallax del hero: el contenido sube y se desvanece un
+    // poco al salir (la imagen de fondo se queda fija).
+    gsap.to('.hero-content', {
+      y: -50,
+      opacity: 0.4,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.hero',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: true
+      }
+    });
+
+    // Scroll reveal: fade + slide-up al entrar al viewport, en
+    // tarjetas de categorías, piezas del bento, foto/copy de
+    // "About", el panel de eventos y el bloque de "Visit".
+    // clearProps: 'transform' devuelve el control del transform
+    // al CSS una vez termina la animación, para no pisar los
+    // hover states que ya tienen .cat-card y .bento-card.
+    gsap.utils.toArray('.reveal').forEach(function (el, i) {
+      gsap.fromTo(
+        el,
+        { y: 36, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          ease: 'power2.out',
+          delay: (i % 4) * 0.08,
+          clearProps: 'transform',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 88%',
+            toggleActions: 'play none none reverse'
+          }
+        }
+      );
     });
   }
 
