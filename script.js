@@ -16,23 +16,30 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
-  // ---------- Smooth scroll de respaldo ----------
-  // (Ya cubierto por `scroll-behavior: smooth` en CSS,
-  // esto es solo un respaldo para navegadores muy antiguos
-  // que no soportan esa propiedad CSS)
-  const supportsSmoothScroll = 'scrollBehavior' in document.documentElement.style;
-  if (!supportsSmoothScroll) {
-    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
-      link.addEventListener('click', function (e) {
-        const targetId = link.getAttribute('href');
-        const target = document.querySelector(targetId);
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
-    });
+  // Si la página se abre con un hash ya en la URL (por ejemplo,
+  // quedó guardado en favoritos desde antes de este cambio),
+  // lo limpiamos para que siempre arranque desde el hero.
+  if (window.location.hash) {
+    window.history.replaceState(null, '', window.location.pathname + window.location.search);
+    window.scrollTo(0, 0);
   }
+
+  // ---------- Scroll a las secciones sin cambiar la URL ----------
+  // Interceptamos siempre el clic (no solo como respaldo para
+  // navegadores viejos): así el link nunca cambia la URL a
+  // "#menu", "#about", etc. Eso evita que, si alguien recarga
+  // la página con uno de esos hashes en la URL, el navegador
+  // salte directo a esa sección en vez de mostrar el hero.
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      const targetId = link.getAttribute('href');
+      const target = document.querySelector(targetId);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
 
   // ---------- Formulario de eventos ("Book the Cart") ----------
   // Envía los datos directo a Formspree via fetch (AJAX), sin
