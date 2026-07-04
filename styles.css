@@ -710,3 +710,16 @@ a:focus-visible {
   text-transform: uppercase;
   color: rgba(255,217,229,.55);
 }
+
+/* =========================================================
+   EVENTS FEEDBACK — mensaje de éxito/error del formulario
+   (agregado para el envío via Formspree)
+========================================================= */
+#events-feedback.success {
+  color: #2E7D52;
+  font-weight: 500;
+}
+#events-feedback.error {
+  color: #C62828;
+  font-weight: 500;
+}

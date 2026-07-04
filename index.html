@@ -286,7 +286,7 @@
         <p class="eyebrow">Tell us a little</p>
         <h2 class="title">Let's plan your day.</h2>
 
-        <form id="events-form" class="events-form">
+        <form id="events-form" class="events-form" action="https://formspree.io/f/mkolkqgo" method="POST">
           <div class="field">
             <label for="ev-name">Name</label>
             <input type="text" id="ev-name" name="name" placeholder="María Rossi" required>
@@ -324,9 +324,11 @@
             <input type="number" id="ev-guests" name="guests" placeholder="50" min="1" required>
           </div>
 
+          <input type="text" name="_gotcha" style="display:none">
+
           <button type="submit" class="events-submit">Send my request <span class="arrow">→</span></button>
 
-          <p class="events-disclaimer">This opens an email to <span class="events-email-placeholder">events@savigelato.com</span> with your details — review and send.<br>Requests at least 7 days ahead.</p>
+          <p id="events-feedback" class="events-disclaimer">Requests at least 7 days ahead. We'll get back to you shortly. ✨</p>
         </form>
       </div>
 
