@@ -3,13 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SAVI — Gelato, Smoothies & Açaí</title>
+  <title>SAVI — Gelato, Smoothies & Açaí | Brunswick, GA</title>
+
+  <!-- SEO: meta description -->
+  <!-- TODO: reemplazar "your-domain.com" por el dominio final una vez que el cliente lo confirme -->
+  <meta name="description" content="Artisanal Italian gelato, smoothies, açaí bowls & coffee in Brunswick, GA. Made in small batches with real fruit and real milk. Book our mobile gelato cart for weddings, birthdays & events.">
+
+  <!-- Open Graph (previews en WhatsApp, Facebook, iMessage, etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SAVI — Gelato, Smoothies & Açaí">
+  <meta property="og:description" content="Artisanal Italian gelato, smoothies, açaí bowls & coffee in Brunswick, GA. Made in small batches with real fruit and real milk.">
+  <meta property="og:image" content="https://your-domain.com/images/about-counter.jpg">
+  <meta property="og:url" content="https://your-domain.com/">
+
+  <!-- Twitter/X card (usa las mismas Open Graph tags como fallback) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SAVI — Gelato, Smoothies & Açaí">
+  <meta name="twitter:description" content="Artisanal Italian gelato, smoothies, açaí bowls & coffee in Brunswick, GA.">
+  <meta name="twitter:image" content="https://your-domain.com/images/about-counter.jpg">
 
   <!-- Google Fonts: Jost (cuerpo/UI) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-
+  <!-- Favicon: SVG para Chrome/Firefox/Edge + PNG/ICO de respaldo para Safari
+       (Safari no soporta favicons SVG salvo en versiones muy recientes,
+       así que sin el ICO/PNG el ícono simplemente no aparece en Safari) -->
+  <link rel="icon" type="image/svg+xml" href="cono-savi-favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -349,8 +372,8 @@
           <div class="visit-row">
             <svg class="visit-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
             <div>
-              <p class="visit-main">3365 Cypress Mill Rd, Suite 3</p>
-              <p class="visit-sub">Georgia</p>
+              <p class="visit-main">3365 Cypress Mill Rd, Ste 3</p>
+              <p class="visit-sub">Brunswick, GA 31520</p>
             </div>
           </div>
 
@@ -372,16 +395,21 @@
           </div>
         </div>
 
-        <a href="https://www.google.com/maps/search/?api=1&query=3365+Cypress+Mill+Rd+Suite+3+GA" target="_blank" rel="noopener" class="visit-cta">
-          Get directions <span class="arrow">→</span>
-        </a>
+        <div class="visit-buttons">
+          <a href="https://www.google.com/maps/search/?api=1&query=3365+Cypress+Mill+Rd+Ste+3+Brunswick+GA+31520" target="_blank" rel="noopener" class="visit-cta">
+            Get directions <span class="arrow">→</span>
+          </a>
+          <a href="https://ig.me/m/savi.gelato" target="_blank" rel="noopener" class="visit-cta-secondary">
+            Ask us a question <span class="arrow">→</span>
+          </a>
+        </div>
       </div>
 
       <!-- Mapa real embebido de Google Maps con la dirección de SAVI -->
       <div class="map-card reveal">
         <iframe
           class="map-iframe"
-          src="https://www.google.com/maps?q=3365+Cypress+Mill+Rd+Suite+3+GA&output=embed"
+          src="https://www.google.com/maps?q=3365+Cypress+Mill+Rd+Ste+3+Brunswick+GA+31520&output=embed"
           width="100%"
           height="100%"
           style="border:0;"
@@ -390,7 +418,7 @@
           referrerpolicy="no-referrer-when-downgrade"
           title="SAVI location map">
         </iframe>
-        <a href="https://www.google.com/maps/search/?api=1&query=3365+Cypress+Mill+Rd+Suite+3+GA" target="_blank" rel="noopener" class="map-open">
+        <a href="https://www.google.com/maps/search/?api=1&query=3365+Cypress+Mill+Rd+Ste+3+Brunswick+GA+31520" target="_blank" rel="noopener" class="map-open">
           Open in Google Maps <span class="arrow">→</span>
         </a>
       </div>
@@ -413,7 +441,7 @@
 
       <div>
         <p class="footer-heading">Visit</p>
-        <p class="footer-text">3365 Cypress Mill Rd, Suite 3<br>Georgia</p>
+        <p class="footer-text">3365 Cypress Mill Rd, Ste 3<br>Brunswick, GA 31520</p>
         <p class="footer-text spaced">Mon – Fri · 11 am – 8 pm<br>Sat · 12 pm – 10 pm &nbsp;|&nbsp; Sun · 12 pm – 8 pm</p>
       </div>
 
